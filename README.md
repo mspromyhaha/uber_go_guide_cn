@@ -741,6 +741,8 @@ x: y: new store: the error
 
 但是，一旦将错误发送到另一个系统，就应该明确消息是错误消息（例如使用`err`标记，或在日志中以”Failed”为前缀）。
 
+> 对外的消息,应该加以 err 或 failed,显式的表明"错误".
+
 另请参见 [Don't just check errors, handle them gracefully]. 不要只是检查错误，要优雅地处理错误
 
   [`"pkg/errors".Cause`]: https://godoc.org/github.com/pkg/errors#Cause
