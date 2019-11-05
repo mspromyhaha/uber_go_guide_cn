@@ -808,17 +808,19 @@ func main() {
 
 </td><td>
 
-panic
+```go
 func foo(bar string) error {
   if len(bar) == 0 {
-    return errors.New("bar must not be empty")  //my: (1) 返回 error,而不是 panic.
+    //my: (1) 返回 error,而不是 panic.
+    return errors.New("bar must not be empty")
   }
   // ...
   return nil
 }
 
 func main() {
-  if len(os.Args) != 2 { //my: (2) 进行 error 处理, print,必要时 exit.
+  if len(os.Args) != 2 { 
+    //my: (2) 进行 error 处理, print,必要时 exit.
     fmt.Println("USAGE: foo <bar>")
     os.Exit(1)
   }
