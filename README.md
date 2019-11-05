@@ -697,8 +697,9 @@ Use fmt.Errorf if the callers do not need to detect or handle that specific erro
 - 如果调用者不需要检测或处理的特定错误情况，使用 [`fmt.Errorf`]。
 
 建议在可能的地方添加上下文，以使您获得诸如“调用服务 foo：连接被拒绝”之类的更有用的错误，而不是诸如“连接被拒绝”之类的模糊错误。
-
+> “调用服务 foo：连接被拒绝” 比 “连接被拒绝”  清晰
 在将上下文添加到返回的错误时，请避免使用“failed to”之类的短语来保持上下文简洁，这些短语会陈述明显的内容，并随着错误在堆栈中的渗透而逐渐堆积：
+> "failed to" 尽量少用,因为 error 已经表明是错误,没必要重复.
 
 <table>
 <thead><tr><th>Bad</th><th>Good</th></tr></thead>
