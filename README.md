@@ -731,12 +731,14 @@ if err != nil {
 
 ```
 failed to x: failed to y: failed to create new store: the error
+//my: 可读性不好
 ```
 
 </td><td>
 
 ```
 x: y: new store: the error
+//my: 可读性好
 ```
 
 </td></tr>
